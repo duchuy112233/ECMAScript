@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css" media="screen">
+    .user_item {
+      color: green;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+  <title>Danh sách người dùng</title>
+</head>
+<body>
+  <!-- Form để điền thông tin -->
+  <form id="userForm">
+    <label for="userId">ID:</label>
+    <input type="text" id="userId" name="userId" required>
+    <br>
+    <label for="userName">Name:</label>
+    <input type="text" id="userName" name="userName" required>
+    <br>
+    <label for="userGender">Gender:</label>
+    <select id="userGender" name="userGender" required>
+      <option value="1">Nam</option>
+      <option value="2">Nữ</option>
+    </select>
+    <br>
+ 
+    <button type="button" onclick="addUser()">Add</button>
+  </form>
+
+  <!-- Danh sách không được sắp xếp để chứa các mục người dùng -->
+  <ul id="target">
+    <!-- Các mục người dùng sẽ được thêm vào đây động -->
+  </ul>
+
+  <script>
+    var users = [
+      { id: 1, name: "James Smith", gender: 1 },
+      { id: 2, name: "Isla Brown", gender: 2 },
+      { id: 3, name: "Amelia Davies", gender: 2 },
+      { id: 4, name: "Jacob Evans", gender: 1 }
+    ];
+
+    function addUser() {
+      // Lấy giá trị từ các trường input và select
+      var userId = document.getElementById("userId").value;
+      var userName = document.getElementById("userName").value;
+      var userGender = document.getElementById("userGender").value;
+
+      // Chuyển đổi giá trị gender từ string sang số nguyên
+      userGender = parseInt(userGender);
+
+      // Tạo đối tượng người dùng mới từ thông tin nhập vào
+      var newUser = { id: parseInt(userId), name: userName, gender: userGender };
+
+      // Thêm người dùng mới vào mảng users
+      users.push(newUser);
+
+      // Hiển thị danh sách người dùng sau khi thêm
+      displayUserList();
+    }
+
+    function displayUserList() {
+      var target = document.getElementById("target");
+      
+      // Xóa nội dung hiện tại của danh sách
+      target.innerHTML = "";
+
+      // Duyệt qua mảng users và thêm mỗi người dùng vào danh sách
+      users.forEach(function(user) {
+        var listItem = document.createElement("li");
+        listItem.classList.add("user_item");
+        listItem.textContent = `${user.id} - ${user.name} - ${user.gender === 1 ? 'Nam' : 'Nữ'}`;
+        target.appendChild(listItem);
+      });
+    }
+  </script>
+</body>
+</html>

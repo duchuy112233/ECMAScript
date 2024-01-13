@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <button onclick="rainbowify()">Rainbow</button>
+
+
+    <script>
+        let a = document.querySelectorAll('div');
+        function rainbowify() {
+            
+            a.forEach((item) => {
+                let color = item.getAttribute('id');
+                // console.log(color);
+                item.style.backgroundColor = color;
+            })
+        }
+    </script>
+</body>
+
+</html>

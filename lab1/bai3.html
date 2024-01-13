@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi sang camelCase</title>
+</head>
+
+<body>
+    <!-- Form nhập -->
+    <form id="convertForm">
+        <label for="string">Nhập chuỗi:</label>
+        <input type="text" id="string" name="string" required>
+        <br>
+        <button type="button" onclick="convert()">Convert</button>
+    </form>
+
+    <!-- Hiển thị -->
+    <div id="output"></div>
+
+    <script>
+        function convert() {
+            var string = document.getElementById("string").value;
+            var camelCaseString = string.replace(/[^a-zA-Z0-9]/g, ' ')
+                .split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join('');
+
+            document.getElementById("output").textContent = camelCaseString;
+        }
+    </script>
+</body>
+
+</html>

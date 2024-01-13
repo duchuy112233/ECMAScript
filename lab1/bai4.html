@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Bài 4 console</h1>
+
+    <script>
+        let classRoom = [
+            "nguyễn tiến duẩn",
+            "Hoàng Xuân Hiếu",
+            "Hồ Sỹ Hưng",
+            "Nguyễn Đức Thuận",
+            "đoàn Minh Tùng",
+            "Hồ Sỹ Hưng",
+            "Lê Trung Hiếu",
+            "đoàn vua dep trai vua hoc gioi Hữu Quý"
+        ];
+
+
+        //1 Tách tên và họ riêng
+        let hoten = classRoom.map(fullName => {
+            let parts = fullName.split(' ');
+            return { ho: parts[0], ten: parts.slice(1).join(' ') };
+        });
+        console.log("Câu 1:", hoten);
+
+
+        //2 Thêm một sinh viên vào vị trí bất kỳ trong mảng
+        let svNew = "Nguyễn Văn A";
+        let viTri = 4;
+        classRoom.splice(viTri, 0, svNew);
+        console.log("Câu 2:", classRoom);
+
+
+        //3 Xoá một sinh viên khỏi mảng
+        let deleteSV = "Hồ Sỹ Hưng";
+        classRoom = classRoom.filter(student => student !== deleteSV);
+        console.log("Câu 3:", classRoom);
+
+
+        //4 Tìm kiếm theo tên, không chứa dấu
+        let searchName = "Thuan";
+        let foundSV = classRoom.filter(student => {
+            let nameSV = student.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            return nameSV.includes(searchName.toLowerCase());
+        });
+        console.log("Câu 4:", foundSV);
+
+    </script>
+</body>
+
+</html>

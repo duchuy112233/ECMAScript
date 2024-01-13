@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách người dùng</title>
+    
+    <style type="text/css" media="screen">
+        .user_item {
+            color: green;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1>Danh sách người dùng</h1>
+    <ul id="target">
+
+
+    </ul>
+
+    <script>
+        var users = [
+            { id: 1, name: "James Smith", gender: 1 },
+            { id: 2, name: "Isla Brown", gender: 2 },
+            { id: 3, name: "Amelia Davies", gender: 2 },
+            { id: 4, name: "Jacob Evans", gender: 1 }
+        ];
+
+        var target = document.querySelector("#target");
+
+
+        // Duyệt qua mỗi người dùng và thêm một mục danh sách cho mỗi người dùng vào thẻ ul
+        users.forEach(function (user) {
+
+            var listItem = document.createElement("li");// Tạo một mục danh sách (li) mới
+            listItem.classList.add("user_item");// Thêm lớp để áp dụng kiểu CSS
+
+
+            // Thiết lập nội dung văn bản cho mục danh sách dựa trên thông tin người dùng
+            listItem.textContent = `${user.id} - ${user.name} - ${user.gender === 1 ? 'Nam' : 'Nữ'}`;
+
+            target.appendChild(listItem);
+        });
+
+
+        
+    </script>
+</body>
+
+</html>
