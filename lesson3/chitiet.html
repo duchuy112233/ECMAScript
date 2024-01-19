@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ... icon ... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+
+</head>
+
+<body class="font-sans">
+
+    <header class="bg-blue-500 bg-opacity-75 py-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="text-white text-lg font-bold ml-40">
+                <img src="https://toponereview.com/wp-content/uploads/2023/07/Tiki.jpg" alt="" class="w-16 h-auto">
+            </div>
+
+
+            <!-- Search Form -->
+            <form class="flex items-center ml-28">
+                <input type="text" class="py-1 px-48 border border-gray-300 rounded-md mr-2" placeholder="Search...">
+                <button type="submit" class="bg-white text-blue-500 py-1 px-3 rounded-md">Search</button>
+            </form>
+
+            <!-- ĐK, ĐN, Giỏ hàng -->
+            <div class="flex items-center text-white space-x-4 mr-40">
+                <div class="mr-10">
+                    <i class="fas fa-user text-white-800 mr-2"></i>
+                    <a href="#" class="mx-1">Đăng nhập</a>
+                    <a href="#" class="mx-1">Đăng ký</a>
+
+                </div>
+
+                <a href="#" class="mx-2 flex items-center">
+                    <i class="fas fa-shopping-cart text-white mr-1"></i>
+                </a>
+            </div>
+
+
+        </div>
+    </header>
+
+    <div class="mx-auto max-w-screen-xl p-4">
+        <div class="flex gap-2">
+            <div class=" flex-1 max-w-3xl ml-5">
+                <!-- Large product image goes here -->
+                <div class="mx-auto my-auto">
+                    <img src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                        alt="Product Image" class="rounded-lg shadow-lg w-2/3 ml-14">
+
+                </div>
+
+                <div class="mt-4 flex mx-auto my-auto">
+                    <div class="flex justify-between p-4 gap-2">
+                        <!-- Small related product images go here -->
+                        <div class="w-1/5 border p-2">
+                            <img src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                                alt="Related Product 1" class="w-16 rounded-lg">
+                        </div>
+                        <div class="w-1/5 border p-2">
+                            <img src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                                alt="Related Product 2" class="w-16 rounded-lg">
+                        </div>
+                        <div class="w-1/5 border p-2">
+                            <img src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                                alt="Related Product 3" class="w-16 rounded-lg">
+                        </div>
+                        <div class="w-1/5 border p-2">
+                            <img src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                                alt="Related Product 4" class="w-16 rounded-lg">
+                        </div>
+                        <div class="w-1/5 border p-2">
+                            <img src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                                alt="Related Product 5" class="w-16 rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex-1 p-4 relative mr-40">
+                <!-- Đường line mờ bên trái -->
+                <div class="absolute h-full w-0.5 bg-gray-300 top-0 left-0 -ml-4"></div>
+
+                <div class="text-2xl font-bold mb-4">Kỉ luật tự do</div>
+                <!-- Hiển thị đánh giá và số lượng đã bán -->
+                <div class="flex items-center mb-4">
+                    <div class="text-yellow-500 mr-2">
+                        <!-- Sử dụng Font Awesome để hiển thị sao -->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-gray-600">(Xem 5 đánh giá) | Đã bán 100+</span>
+                </div>
+                <div class="flex items-center">
+                    <p class="text-red-500 text-2xl mb-2 mr-2">83.930 đ</p>
+                    <p class="text-gray-500 mb-0.5 mr-2">109.000 đ</p>
+                    <div class="text-red-500 text-xs border border-red-500 px-1">-32%</div>
+                </div>
+
+                <div class="mb-4 mt-48">
+                    <label for="quantity" class="text-gray-600">Số lượng:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1"
+                        class="border rounded px-2 py-1">
+                </div>
+                <button class="bg-red-500 text-white px-28 py-2 rounded">Mua hàng</button>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Danh sách 5 sản phẩm liên quan -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">Sản phẩm liên quan</h2>
+            <div class="flex flex-wrap justify-center m-12 gap-5">
+
+                <!-- Sản phẩm liên quan 1 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <a href=""> <img
+                            src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                            alt="Product 1" class="w-full h-40 object-cover mb-2 rounded-md"></a>
+                    <h3 class="text-lg font-semibold mb-1">Product 1</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="text-yellow-500 mr-2 text-xs">
+                            <!-- Sử dụng Font Awesome để hiển thị sao -->
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 ml-1 text-xs">| Đã bán 1000+</span>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-gray-800 mb-0.5 mr-2">$19.99</p>
+                        <div class="text-red-500 text-xs border border-red-500 px-1">-32%</div>
+                    </div>
+                    <div class="text-red-500">Rẻ hơn hoàn tiền</div>
+                </div>
+                <!-- Sản phẩm liên quan 2 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <a href=""> <img
+                            src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                            alt="Product 1" class="w-full h-40 object-cover mb-2 rounded-md"></a>
+                    <h3 class="text-lg font-semibold mb-1">Product 1</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="text-yellow-500 mr-2 text-xs">
+                            <!-- Sử dụng Font Awesome để hiển thị sao -->
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 ml-1 text-xs">| Đã bán 1000+</span>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-gray-800 mb-0.5 mr-2">$19.99</p>
+                        <div class="text-red-500 text-xs border border-red-500 px-1">-32%</div>
+                    </div>
+                    <div class="text-red-500">Rẻ hơn hoàn tiền</div>
+                </div>
+                <!-- Sản phẩm liên quan 3 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <a href=""> <img
+                            src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                            alt="Product 1" class="w-full h-40 object-cover mb-2 rounded-md"></a>
+                    <h3 class="text-lg font-semibold mb-1">Product 1</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="text-yellow-500 mr-2 text-xs">
+                            <!-- Sử dụng Font Awesome để hiển thị sao -->
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 ml-1 text-xs">| Đã bán 1000+</span>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-gray-800 mb-0.5 mr-2">$19.99</p>
+                        <div class="text-red-500 text-xs border border-red-500 px-1">-32%</div>
+                    </div>
+                    <div class="text-red-500">Rẻ hơn hoàn tiền</div>
+                </div>
+                <!-- Sản phẩm liên quan 4 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <a href=""> <img
+                            src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                            alt="Product 1" class="w-full h-40 object-cover mb-2 rounded-md"></a>
+                    <h3 class="text-lg font-semibold mb-1">Product 1</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="text-yellow-500 mr-2 text-xs">
+                            <!-- Sử dụng Font Awesome để hiển thị sao -->
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 ml-1 text-xs">| Đã bán 1000+</span>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-gray-800 mb-0.5 mr-2">$19.99</p>
+                        <div class="text-red-500 text-xs border border-red-500 px-1">-32%</div>
+                    </div>
+                    <div class="text-red-500">Rẻ hơn hoàn tiền</div>
+                </div>
+                <!-- Sản phẩm liên quan 5 -->
+                <div class="bg-white p-4 rounded-md shadow-md">
+                    <a href=""> <img
+                            src="https://salt.tikicdn.com/cache/w1200/ts/product/25/c4/75/73b6578834e8aa8e5e071b64fab93d5d.jpg"
+                            alt="Product 1" class="w-full h-40 object-cover mb-2 rounded-md"></a>
+                    <h3 class="text-lg font-semibold mb-1">Product 1</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="text-yellow-500 mr-2 text-xs">
+                            <!-- Sử dụng Font Awesome để hiển thị sao -->
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 ml-1 text-xs">| Đã bán 1000+</span>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-gray-800 mb-0.5 mr-2">$19.99</p>
+                        <div class="text-red-500 text-xs border border-red-500 px-1">-32%</div>
+                    </div>
+                    <div class="text-red-500">Rẻ hơn hoàn tiền</div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold mb-4 ">Mô tả sản phẩm</h2>
+            <div class="description-content overflow-hidden max-h-24">
+                <p class="text-gray-600">
+                    Điện thoại iPhone 15 Pro được trang bị màn hình mới Dynamic Island với kích thước 6.1 inch cùng công
+                    nghệ ProMotion và tính năng Always On Display.
+                    Thiết bị cũng có nhiều thay đổi trong thiết kế với nút hành động cùng cổng sạc USB-C, khung viền
+                    titan sang trọng. Thế hệ điện thoại iPhone 15 mới này được trang bị
+                    04 màu sắc mới như Titan tự nhiên, titan đen, titan trắng và titan xanh <br>
+                    Điện thoại iPhone 15 Pro được trang bị màn hình mới Dynamic Island với kích thước 6.1 inch cùng công
+                    nghệ ProMotion và tính năng Always On Display.
+                    Thiết bị cũng có nhiều thay đổi trong thiết kế với nút hành động cùng cổng sạc USB-C, khung viền
+                    titan sang trọng. Thế hệ điện thoại iPhone 15 mới này được trang bị
+                    04 màu sắc mới như Titan tự nhiên, titan đen, titan trắng và titan xanh. <br>
+                    Điện thoại iPhone 15 Pro được trang bị màn hình mới Dynamic Island với kích thước 6.1 inch cùng công
+                    nghệ ProMotion và tính năng Always On Display.
+                    Thiết bị cũng có nhiều thay đổi trong thiết kế với nút hành động cùng cổng sạc USB-C, khung viền
+                    titan sang trọng. Thế hệ điện thoại iPhone 15 mới này được trang bị
+                    04 màu sắc mới như Titan tự nhiên, titan đen, titan trắng và titan xanh. <br>
+                    Điện thoại iPhone 15 Pro được trang bị màn hình mới Dynamic Island với kích thước 6.1 inch cùng công
+                    nghệ ProMotion và tính năng Always On Display.
+                    Thiết bị cũng có nhiều thay đổi trong thiết kế với nút hành động cùng cổng sạc USB-C, khung viền
+                    titan sang trọng. Thế hệ điện thoại iPhone 15 mới này được trang bị
+                    04 màu sắc mới như Titan tự nhiên, titan đen, titan trắng và titan xanh.
+
+                </p>
+            </div>
+            <button id="btnToggleDescription" class="text-blue-500 mt-2 cursor-pointer">Xem thêm</button>
+        </div>
+
+        <script>
+            // JavaScript để ẩn/hiện toàn bộ nội dung khi nhấp vào nút "Xem thêm"
+            const descriptionContent = document.querySelector('.description-content');
+            const btnToggleDescription = document.getElementById('btnToggleDescription');
+
+            btnToggleDescription.addEventListener('click', function () {
+                if (descriptionContent.classList.contains('max-h-24')) {
+                    descriptionContent.classList.remove('max-h-24');
+                    btnToggleDescription.innerText = 'Thu gọn';
+                } else {
+                    descriptionContent.classList.add('max-h-24');
+                    btnToggleDescription.innerText = 'Xem thêm';
+                }
+            });
+        </script>
+
+
+        <!-- //////////////////// -->
+    </div>
+    <footer class="bg-blue-500 h-40 text-center bg-opacity-75">
+        HUY
+    </footer>
+
+</body>
+
+</html>
