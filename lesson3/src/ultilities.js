@@ -1,16 +1,8 @@
-import Navigo from 'navigo'
+import Navigo from "navigo"; // When using ES modules.
 
-
-// Configure - Cấu hình
-const router = new Navigo('/');
-
-function render(container, component) {
-    document.querySelector(container).innerHTML = component()
+const router = new Navigo("/", { linksSelector: "a" });
+function render(container, components) {
+  document.querySelector(container).innerHTML = components;
 }
-
-
-
-export {
-    router,
-    render
-}
+const Formatter = new Intl.NumberFormat();
+export { router, render, Formatter };

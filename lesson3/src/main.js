@@ -1,21 +1,26 @@
-// Library - Thư viện
 import { render, router } from "./ultilities";
-
-// Components
-import Contact from "./pages/contact";
-import HomePage from "./pages/homepage"
-import NotFound from "./pages/notFound";
-
-router.on('/', function () {
-  render("#app", HomePage)
+import { books } from "../db.json" assert {type:'json'};
+import HomePage from "./pages/homePages";
+import DetailProductPage from "./pages/detailProduct";
+import Products from "./components/products";
+router.on({
+  "/": () => render("#app", HomePage(books)),
+  "/book/detail/:id": (data) =>{render("main", DetailProductPage(books,data.data.id))
+  window.scrollTo(0,0);
+},
 });
-
-router.on('/contact', function () {
-  render("#app", Contact)
-});
-
-router.notFound(function () {
-  render("#app", NotFound)
-})
 router.resolve();
-// 
+// Search
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelector.bind(document);
+let inputSearch = $('.search-wapper input');
+let btnSearch = $('.search-wapper button');
+btnSearch.addEventListener('click',() =>{
+  let keyWord = inputSearch.value;
+  console.log(keyWord)
+   let booksSearch = books.filter((book)=>{
+    return book.name.toLowerCase().includes(keyWord.toLowerCase());
+  })
+  render("#products",Products(booksSearch));
+});
+
