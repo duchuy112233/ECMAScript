@@ -35,7 +35,7 @@ const Products = function (books) {
             <div class="text-red-500 slogan color-price flex relative mt-1">
                 <i class="fa-solid fa-shield" style="font-size: 18px"></i>
                 <span class="text-white absolute -top-1 left-1">$</span>
-                <p class="uppercase text-xs pl-1">Rẻ hơn khi hoàn tiền</p>
+                <p class="uppercase text-xs pl-1">RẺ HƠN HOÀN TIỀN</p>
             </div>
         </div>
     </div>`;
