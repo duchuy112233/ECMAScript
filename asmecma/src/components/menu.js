@@ -9,6 +9,7 @@ const Menu = function () {
           <li><a href="#" class="hover:border-b-2 hover:border-blue-500">Giá Cao</a></li>
       </ul>
   </div>
+  <hr>
 
     `;
 };

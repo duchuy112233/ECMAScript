@@ -5,7 +5,8 @@ const Header = function () {
   <div class="container mx-auto flex items-center justify-between">
       <!-- Logo -->
       <div class="text-white text-lg font-bold ml-40">
-          <img src="./public/img/logo.png" alt="" class="w-16 h-auto">
+      <a href="">  <img src="./public/img/logo.png" alt="" class="w-16 h-auto"></a>
+        
       </div>
 
       <div class="header__feature flex items-center grow">
@@ -13,7 +14,7 @@ const Header = function () {
         <!-- Search Form -->
         <form class="flex items-center ml-28">
             <input type="search" class="py-1 px-48 border text-black  " placeholder="">
-            <button type="submit" class="bg-blue-600 text-white  py-1 px-4  "> <i class="fa-solid fa-magnifying-glass pr-2 text-sm"></i>Tim kiem</button>
+            <button type="submit" class="bg-blue-600 text-white  py-1 px-4  "> <i class="fa-solid fa-magnifying-glass pr-2 text-sm"></i>Tìm kiếm</button>
         </form>
 
         <!-- ĐK, ĐN, Giỏ hàng -->

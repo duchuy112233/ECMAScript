@@ -21,7 +21,7 @@ const ProductDetail = (books, id) => {
         class="absolute bottom-4 left-4 text-white bg-[#24242467] rounded-2xl px-2 py-1 cursor-pointer"
       >
         <i class="fa-brands fa-readme"></i
-        ><span class="pl-1 font-light">Đọc Thử</span>
+        ><span class="pl-1 font-light">Đọc sách</span>
       </div>
     </div>
     <ul class="flex mt-4 cursor-pointer">
@@ -71,7 +71,7 @@ const ProductDetail = (books, id) => {
         <div class="sub border-r-[1px] border-[#ECECEC] px-2">
           <i class="fa-solid fa-minus"></i>
         </div>
-        <input type="number " class="max-w-10 outline-none pl-1" />
+        <input type="number" class="max-w-10 outline-none pl-1" value="1" />
         <div class="add border-l-[1px] border-[#ECECEC] px-2">
           <i class="fa-solid fa-plus"></i>
         </div>
