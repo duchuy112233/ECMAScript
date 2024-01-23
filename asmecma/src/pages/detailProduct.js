@@ -6,6 +6,7 @@ const DetailProductPage = (books, id) => {
 ${ProductDetail(books, id)}
 ${SimilarProduct(books, id)}
 ${DescriptionProduct()}
+
     </div>`;
 };
 export default DetailProductPage;
