@@ -21,12 +21,12 @@ const Header = function () {
         <div class="ml-10 user-wapper flex items-center">
         <img src="./icon/user.png" alt="" class="w-8 h-auto">
         <div class="user-status text-xs">
-          <div class="user-text text-white">
-            <span>Đăng Nhập</span> /
-            <span>Đăng Ký</span>
+          <div class="user-text text-white flex">
+            <span><a href=""><img src="" alt="">Đăng Nhập</a></span> /
+            <span><a href=""><img src="" alt="">Đăng Ký</a></span>
           </div>
           <div class="user-account text-white">
-            Tài khoản<i class="fa-solid fa-sort-down pl-1"></i>
+           <a href=""><img src="" alt=""> Tài khoản</a> <i class="fa-solid fa-sort-down pl-1"></i>
           </div>
         </div>
         <!-- Giỏ hàng -->

@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 html {
   font-family: "Roboto";
   color: #fff;
 }
-
 
 .color-text {
   color: #242424;
@@ -19,10 +16,6 @@ html {
 .category ul li {
   @apply text-xs py-1;
 }
-
-
-
-
 
 .slide:hover .btn-slide {
   display: flex;

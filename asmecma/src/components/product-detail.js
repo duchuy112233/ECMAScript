@@ -21,7 +21,7 @@ const ProductDetail = (books, id) => {
         class="absolute bottom-4 left-4 text-white bg-[#24242467] rounded-2xl px-2 py-1 cursor-pointer"
       >
         <i class="fa-brands fa-readme"></i
-        ><span class="pl-1 font-light">Đọc sách</span>
+        >
       </div>
     </div>
     <ul class="flex mt-4 cursor-pointer">
