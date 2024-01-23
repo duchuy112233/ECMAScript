@@ -34,11 +34,11 @@ const Header = function () {
         <div class="relative">
         <img src="./icon/giohang.png" alt="" class="w-8 h-auto">
           <span
-            class="w-5 h-5 rounded-full bg-yellow-400 text-center absolute -right-2 -top-1 leading-5 color-text"
-            >0</span
+            class="w-5 h-5 rounded-full bg-yellow-200 text-center absolute -right-2 -top-1 leading-5 color-text t"
+            ><p class = "text-red-500">3</p></span
           >
         </div>
-        <p class="text-xs pt-4 pl-2">Giỏ hàng</p>
+        <p class="text-xs pt-4 pl-2 ">Giỏ hàng</p>
       </div>
       </div>  
     </div>

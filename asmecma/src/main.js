@@ -10,17 +10,4 @@ router.on({
 },
 });
 router.resolve();
-// Search
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelector.bind(document);
-let inputSearch = $('.search-wapper input');
-let btnSearch = $('.search-wapper button');
-btnSearch.addEventListener('click',() =>{
-  let keyWord = inputSearch.value;
-  console.log(keyWord)
-   let booksSearch = books.filter((book)=>{
-    return book.name.toLowerCase().includes(keyWord.toLowerCase());
-  })
-  render("#products",Products(booksSearch));
-});
 
