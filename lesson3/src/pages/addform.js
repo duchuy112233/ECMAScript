@@ -41,7 +41,7 @@ const addForm = function () {
 
 //
         fetch("http://localhost:3000/books", {
-            method: "PUT",
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
