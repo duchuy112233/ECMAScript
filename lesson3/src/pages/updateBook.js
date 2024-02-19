@@ -3,7 +3,9 @@ import { isEmpty } from "lodash"
 
 
 
+
 const UpdateBook = function (id) {
+
     const [book, setBook] = useState({});
 
     useEffect(function () {
@@ -32,20 +34,25 @@ const UpdateBook = function (id) {
             </div>
         `;
     }
-    
+
 
 
     const handleUpdateBook = function () {
-        // Lấy dữ liệu từ biểu mẫu
+
         const formData = new FormData(document.querySelector("#update-form"));
-    
-        // Tạo đối tượng updatedData từ dữ liệu biểu mẫu
+
+
         const updatedData = {
-            name: formData.get("name"), // Lấy tên sách từ biểu mẫu
-          
+            name: formData.get("name"),
+            price: formData.get("price"),
+            list_price: formData.get("list_price"),
+            original_price: formData.get("promo_price"),
+            rating_average: formData.get("rating"),
+   
+
         };
-    
-        // Gửi yêu cầu PATCH để cập nhật dữ liệu sách
+
+//
         fetch("http://localhost:3000/books/" + id, {
             method: "PATCH",
             headers: {
@@ -54,7 +61,7 @@ const UpdateBook = function (id) {
             body: JSON.stringify(updatedData),
         });
     };
-    
+
 
     return /*html*/`
     
@@ -106,7 +113,7 @@ const UpdateBook = function (id) {
                             type="text"
                             class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                             placeholder="Enter price"
-                            value = "${book.list_price}"
+                            value = "${book.price}"
                             name = "price"
                         />
                     </div>
@@ -149,17 +156,7 @@ const UpdateBook = function (id) {
                         />
                     </div>
                 </div>
-                <div>
-                    <label for="active" class="">Active</label>
-                    <div class="relative">
-                        <input
-                            type="checkbox"
-                            class="rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                            name="active"
-                            ${book.active ? 'checked' : ''}
-                        />
-                    </div>
-                </div>
+         
 
             
                

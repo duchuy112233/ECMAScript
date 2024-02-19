@@ -9,7 +9,7 @@ import BookDetail from "./pages/bookDetail";
 import "../style.css"
 import Dashboard from "./pages/dashboard";
 import UpdateBook from "./pages/updateBook";
-import addForm from "./components/addform";
+import addForm from "./pages/addform";
 
 router.on('/', function () {
   render("#app", HomePage)
