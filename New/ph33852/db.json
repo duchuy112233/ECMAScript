@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "810c",
+      "name": "Dragon Ball",
+      "publisher": "japan",
+      "description": "Rất hay,...",
+      "price": "132.000",
+      "rating": "5",
+      "img": "https://th.bing.com/th/id/OIP.Ixgx2LwK52t3VG5ZRP_U2QHaF7?rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "95ea",
+      "name": "Rừng Nauy",
+      "publisher": "Kim Đồng",
+      "description": "Hay",
+      "price": "84.000",
+      "rating": "3",
+      "img": "https://th.bing.com/th/id/OIP.ep_4gkMsAK_gUMqUkLVp4QHaEZ?pid=ImgDet&w=207&h=123&c=7&dpr=1.3"
+    },
+    {
+      "id": "3c1e",
+      "name": "Dragon Ball 4",
+      "publisher": "Sở HN",
+      "description": "quá hay",
+      "price": "99.000",
+      "rating": "4",
+      "img": "https://th.bing.com/th/id/OIP.h22evvkdkBJsEi21GzzrmAHaMS?rs=1&pid=ImgDetMain"
+    }
+  ]
+}
